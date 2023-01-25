@@ -255,9 +255,8 @@ header button:hover, .sub-footer button:hover {
   background-color: hsl(28deg, 89%, 67%);
 }
 
-#section-slider {
+.carousel-section {
   width: 100vw;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,25 +264,21 @@ header button:hover, .sub-footer button:hover {
   margin-top: 84px;
   overflow-x: hidden;
 }
-#section-slider .slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-#section-slider .slider img {
-  border-radius: 10px;
+.carousel-section .swiper-wrapper .swiper-slide {
   max-width: 72%;
 }
-#section-slider .slider-buttons {
+.carousel-section .swiper-wrapper .swiper-slide img {
+  border-radius: 10px;
+}
+.carousel-section .button-controls {
   display: flex;
   gap: 15px;
 }
-#section-slider .slider-buttons button {
+.carousel-section .button-controls button {
   padding: 25px;
   background-color: hsl(0deg, 0%, 1%);
 }
-#section-slider .slider-buttons button:hover {
+.carousel-section .button-controls button:hover {
   cursor: pointer;
   background-color: hsl(252deg, 66%, 62%);
 }
@@ -357,19 +352,6 @@ footer button:hover {
   #section-who-i-am .who-i-am-content button:hover {
     background-color: hsl(28deg, 89%, 67%);
   }
-  #section-slider {
-    gap: 32px;
-    max-width: 1700px;
-    margin: 0 auto;
-    margin-top: 120px;
-  }
-  #section-slider .slider {
-    gap: 30px;
-  }
-  #section-slider .slider-buttons {
-    display: flex;
-    gap: 15px;
-  }
   footer {
     margin: 120px 40px 22px 40px;
     padding: 60px 75px;
@@ -392,6 +374,8 @@ footer button:hover {
 @media screen and (min-width: 1440px) {
   header, .sub-footer {
     padding: 34px 165px 0 165px;
+    margin: 0 auto;
+    max-width: 1440px;
   }
   #hero {
     padding: 0 344px;
@@ -426,16 +410,9 @@ footer button:hover {
     max-width: 540px;
     gap: 33px;
   }
-  #section-slider {
-    gap: 56px;
-    margin-top: 88px;
-  }
-  #section-slider .slider-buttons {
-    display: flex;
-    gap: 15px;
-  }
   footer {
-    margin: 88px 165px 22px 165px;
+    margin: 88px auto 22px auto;
+    max-width: 1110px;
     padding: 80px 65px;
     display: flex;
     justify-content: space-between;
@@ -453,6 +430,6 @@ footer button:hover {
     margin-top: 0;
   }
   .sub-footer {
-    margin-bottom: 64px;
+    margin: 0 auto 64px auto;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -168,9 +168,8 @@ header, .sub-footer{
 }
     // -------------------------------------SLIDER-------------------------------------
 
-#section-slider{
+.carousel-section{
     width: 100vw;
-    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,19 +177,21 @@ header, .sub-footer{
     margin-top: 84px;
     overflow-x: hidden;
 
-    .slider{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
+    .swiper-wrapper{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // gap: 15px;
 
-        img{
-            border-radius: 10px;
+        .swiper-slide{
             max-width: 72%;
+            img{
+                border-radius: 10px;
+            }
         }
     }
 
-    .slider-buttons{
+    .button-controls{
         display: flex;
         gap: 15px;
 
@@ -302,21 +303,21 @@ footer{
     }
     // -------------------------------------SLIDER-------------------------------------
 
-    #section-slider{
-        gap: 32px;
-        max-width: 1700px;
-        margin: 0 auto;
-        margin-top: 120px;
+    // #section-slider{
+    //     gap: 32px;
+    //     max-width: 1700px;
+    //     margin: 0 auto;
+    //     margin-top: 120px;
     
-        .slider{
-            gap: 30px;
-        }
+    //     .slider{
+    //         gap: 30px;
+    //     }
     
-        .slider-buttons{
-            display: flex;
-            gap: 15px;
-        }
-    }
+    //     .slider-buttons{
+    //         display: flex;
+    //         gap: 15px;
+    //     }
+    // }
         // -------------------------------------FOOTER-------------------------------------
 
     footer{
@@ -351,6 +352,8 @@ footer{
 
     header, .sub-footer{
         padding: 34px 165px 0 165px;
+        margin: 0 auto;
+        max-width: 1440px;
     }
 
     // -------------------------------------HERO-------------------------------------
@@ -400,19 +403,20 @@ footer{
     }
     // -------------------------------------SLIDER-------------------------------------
 
-    #section-slider{
-        gap: 56px;
-        margin-top: 88px;
+    // #section-slider{
+    //     gap: 56px;
+    //     margin-top: 88px;
     
-        .slider-buttons{
-            display: flex;
-            gap: 15px;
-        }
-    }
+    //     .slider-buttons{
+    //         display: flex;
+    //         gap: 15px;
+    //     }
+    // }
         // -------------------------------------FOOTER-------------------------------------
 
     footer{
-        margin: 88px 165px 22px 165px;
+        margin: 88px auto 22px auto;
+        max-width: 1110px;
         padding: 80px 65px;
         display: flex;
         justify-content: space-between;
@@ -434,6 +438,6 @@ footer{
     }
 
     .sub-footer{
-        margin-bottom: 64px;
+        margin: 0 auto 64px auto;
     }
 }

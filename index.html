@@ -7,6 +7,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
   <link rel="stylesheet" href="/CSS/style.css">
+
+  <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    defer
+  ></script>
+
+  <script src="/JS/slider.js"></script>
   
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
@@ -63,18 +75,35 @@
     </div>
   </section>
 
-  <section id="section-slider">
-    <h3>My Work</h3>
-    <div class="slider">
-      <img src="/assets/image-slide-1.jpg" alt="">
-      <img src="/assets/image-slide-2.jpg" alt="">
-      <img src="/assets/image-slide-3.jpg" alt="">
-      <img src="/assets/image-slide-4.jpg" alt="">
-      <img src="/assets/image-slide-5.jpg" alt="">
+  <section class="carousel-section | flow text-center">
+    <h3 class="heading-3">My Work</h3>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/assets/image-slide-1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/image-slide-2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/image-slide-3.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/image-slide-4.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/image-slide-5.jpg" alt="" />
+        </div>
+      </div>
     </div>
-    <div class="slider-buttons">
-      <button class="left-arrow"><img src="/assets/icon-arrow-left.svg" alt=""></button>
-      <button class="right-arrow"><img src="/assets/icon-arrow-right.svg" alt=""></button>
+    <div class="button-controls">
+      <button class="button--control prev" data-type="primary">
+        <img src="/assets/icon-arrow-left.svg" alt="" />
+      </button>
+      <button class="button--control next" data-type="primary">
+        <img src="/assets/icon-arrow-right.svg" alt="" />
+      </button>
     </div>
   </section>
 
@@ -94,7 +123,5 @@
     
     <button><a href="">Free Consultation</a></button>
   </div>
-
-  <script src="/JS/slider.js"></script>
 </body>
 </html>
