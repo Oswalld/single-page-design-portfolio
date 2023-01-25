@@ -299,6 +299,9 @@ footer h2 {
   color: hsl(28deg, 100%, 97%);
   margin-bottom: 24px;
 }
+footer p {
+  color: hsl(28deg, 100%, 97%);
+}
 footer button {
   margin-top: 24px;
   background-color: hsl(7deg, 77%, 66%);
