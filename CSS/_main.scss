@@ -1,0 +1,436 @@
+body{
+    background-color: $white;
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 555px;
+    padding: 14px 45px;
+    a{
+        color: $white;
+    }
+}
+    // -------------------------------------HEADER-------------------------------------
+
+header, .sub-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+
+    svg{
+        transform: scale(0.75);
+
+        path{
+            fill: $black;
+            
+            &:hover{
+                cursor: pointer;
+                animation: color-change 5s infinite;
+            }
+        }
+    }
+
+    @keyframes color-change {
+        0% {
+          fill: $purple;
+        }
+        20% {
+          fill: $orange;
+        }
+        40% {
+          fill: $pink;
+        }
+        60% {
+          fill: $red;
+        }
+        80% {
+          fill: $blue;
+        }
+        100% {
+          fill: $purple;
+        }
+      }
+
+    button{
+        background-color: $black;
+
+        &:hover{
+            background-color: $purple;
+        }
+    }
+}
+    // -------------------------------------HERO-------------------------------------
+
+#hero{
+    text-align: center;
+    padding: 16px;
+
+    h1{
+        margin-bottom: 16px;
+    }
+
+    p{
+        padding: 0 29px;
+    }
+}
+    // -------------------------------------SECTION GRID-------------------------------------
+
+#section-grid{
+    display: grid;
+    grid-template-rows: repeat(6, 182px);
+    gap: 24px;
+    grid-template-areas: 
+    'un un'
+    'un un'
+    'deux trois'
+    'quatre quatre'
+    'cinq cinq'
+    'six six'
+    ;
+    padding: 16px;
+    
+    >:nth-child(1){
+        grid-area: un;
+        background-color: $purple;
+    }
+    >:nth-child(2){
+        grid-area: deux;
+        background-color: $orange;
+    }
+    >:nth-child(3){
+        grid-area: trois;
+        background-color: $pink;
+    }
+    >:nth-child(4){
+        grid-area: quatre;
+        background-color: $red;
+    }
+    >:nth-child(5){
+        grid-area: cinq;
+        background-color: $blue;
+    }
+    >:nth-child(6){
+        grid-area: six;
+        background-color: $dark-purple;
+    }
+
+    .container{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        border-radius: 8px;
+        padding: 24px;
+        color: $white;
+
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+
+        img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 24px;
+        }
+    }
+}
+    // -------------------------------------SECTION WHO I AM-------------------------------------
+
+#section-who-i-am{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 16px;
+    margin-top: 68px;
+
+    img{
+        max-width: 364px;
+        padding: 22px;
+    }
+
+    .who-i-am-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+
+        button{
+            background-color: $red;
+
+            &:hover{
+                background-color: $orange;
+            }
+        }
+    }
+}
+    // -------------------------------------SLIDER-------------------------------------
+
+#section-slider{
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 84px;
+    overflow-x: hidden;
+
+    .slider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        img{
+            border-radius: 10px;
+            max-width: 72%;
+        }
+    }
+
+    .slider-buttons{
+        display: flex;
+        gap: 15px;
+
+        button{
+            padding: 25px;
+            background-color: $black;
+
+            &:hover{
+                cursor: pointer;
+                background-color: $purple;
+            }
+        }
+    }
+}
+    // -------------------------------------FOOTER-------------------------------------
+
+footer{
+    background-color: $black;
+    margin: 100px 16px 16px 16px;
+    padding: 49px 24px;
+    border-radius: 8px;
+    text-align: center;
+
+
+    h2{
+        color: $white;
+        margin-bottom: 24px;
+    }
+
+    button{
+        margin-top: 24px;
+        background-color: $red;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $orange;
+        }
+    }
+}
+
+
+@media screen and(min-width : 768px) {
+    // -------------------------------------HEADER-------------------------------------
+
+    header, .sub-footer{
+        padding: 34px 40px 0 40px;
+    
+        svg{
+            transform: scale(1);
+        }
+    }
+
+    // -------------------------------------HERO-------------------------------------
+    #hero{
+        padding: 0 40px;
+        margin: 64px 0;
+    
+        h1{
+            margin-bottom: 27px;
+        }
+    
+        p{
+            padding: 0 58px;
+        }
+    }
+        // -------------------------------------SECTION GRID-------------------------------------
+
+    #section-grid{
+        grid-template-rows: repeat(3, 182px);
+        grid-template-areas: 
+        'un un deux trois'
+        'un un quatre quatre'
+        'cinq cinq six six'
+        ;
+        padding: 0 46px;
+    }
+        // -------------------------------------SECTION WHO I AM-------------------------------------
+
+    #section-who-i-am{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 69px;
+        padding: 0 40px;
+        margin-top: 120px;
+
+        img{
+            max-width: 364px;
+            padding: 0px;
+            margin-left: -85px;
+        }
+
+        .who-i-am-content{
+            align-items: flex-start;
+            text-align: left;
+            max-width: 500px;
+
+            button{
+                background-color: $red;
+
+                &:hover{
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+    // -------------------------------------SLIDER-------------------------------------
+
+    #section-slider{
+        gap: 32px;
+        max-width: 1700px;
+        margin: 0 auto;
+        margin-top: 120px;
+    
+        .slider{
+            gap: 30px;
+        }
+    
+        .slider-buttons{
+            display: flex;
+            gap: 15px;
+        }
+    }
+        // -------------------------------------FOOTER-------------------------------------
+
+    footer{
+        margin: 120px 40px 22px 40px;
+        padding: 60px 75px;
+
+        h2{
+            margin-bottom: 26px;
+        }
+
+        button{
+            margin-top: 26px;
+        }
+    }
+
+    .sub-footer{
+        margin-bottom: 56px;
+    }
+}
+
+@media screen and(min-width : 950px) {
+    #section-who-i-am{
+
+        img{
+            margin-left: 0px;
+        }
+    }
+}
+
+@media screen and(min-width : 1440px) {
+    // -------------------------------------HEADER-------------------------------------
+
+    header, .sub-footer{
+        padding: 34px 165px 0 165px;
+    }
+
+    // -------------------------------------HERO-------------------------------------
+    #hero{
+        padding: 0 344px;
+        margin: 66px auto 80px auto;
+    
+        h1{
+            margin-bottom: 23px;
+        }
+    
+        p{
+            padding: 0 11px;
+            max-width: 730px;
+            margin: 0 auto;
+        }
+    }
+        // -------------------------------------SECTION GRID-------------------------------------
+
+    #section-grid{
+        grid-template-rows: repeat(2, 182px);
+        grid-template-areas: 
+        'un un deux trois cinq cinq'
+        'un un quatre quatre six six'
+        ;
+        padding: 0 165px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+        // -------------------------------------SECTION WHO I AM-------------------------------------
+
+    #section-who-i-am{
+        gap: 125px;
+        padding: 0 165px;
+        margin-top: 136px;
+
+        img{
+            max-width: 445px;
+        }
+
+        .who-i-am-content{
+            align-items: flex-start;
+            text-align: left;
+            max-width: 540px;
+            gap: 33px;
+        }
+    }
+    // -------------------------------------SLIDER-------------------------------------
+
+    #section-slider{
+        gap: 56px;
+        margin-top: 88px;
+    
+        .slider-buttons{
+            display: flex;
+            gap: 15px;
+        }
+    }
+        // -------------------------------------FOOTER-------------------------------------
+
+    footer{
+        margin: 88px 165px 22px 165px;
+        padding: 80px 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 182px;
+
+        h2{
+            margin-bottom: 25px;
+        }
+
+        p{
+            max-width: 540px;
+        }
+
+        button{
+            margin-top: 0;
+        }
+    }
+
+    .sub-footer{
+        margin-bottom: 64px;
+    }
+}
