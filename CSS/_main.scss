@@ -152,6 +152,7 @@ header, .sub-footer{
         &:hover{
             cursor: pointer;
             transform: scale(1.07);
+            box-shadow: inset 0px 4px 7px rgba(0, 0, 0, 0.25);
 
             .ability{
                 animation: jump 250ms ease-in-out;

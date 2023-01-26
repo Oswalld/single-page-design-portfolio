@@ -263,6 +263,7 @@ header button:hover, .sub-footer button:hover {
 #section-grid .container:hover {
   cursor: pointer;
   transform: scale(1.07);
+  box-shadow: inset 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
 #section-grid .container:hover .ability {
   -webkit-animation: jump 250ms ease-in-out;
