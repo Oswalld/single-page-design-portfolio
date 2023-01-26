@@ -13,12 +13,12 @@
     }
   });
   
-  const prevSlideBtn = document.querySelector(".button--control.prev");
-  const nextSlideBtn = document.querySelector(".button--control.next");
+  const prevSlideBtn = document.querySelector(".button--control-prev");
+  const nextSlideBtn = document.querySelector(".button--control-next");
   
-  prevSlideBtn.addEventListener("click", () => {
-    swiper.slidePrev();
-  });
   nextSlideBtn.addEventListener("click", () => {
     swiper.slideNext();
+  });
+  prevSlideBtn.addEventListener("click", () => {
+    swiper.slidePrev();
   });

@@ -5,24 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.6/swiper-bundle.min.css">
+  
   <link rel="stylesheet" href="./CSS/style.css">
 
-  <!-- Swiper -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
-  <script
-    src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-    defer
-  ></script>
+  <!-- animation text  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <script src="./JS/slider.js"></script>
   
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 <body>
+
+  <script>
+    AOS.init();
+  </script>
+  
 
   <header>
     <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h64v64H0z"/><circle stroke="#FFF7F0" stroke-width="4" cx="32" cy="32" r="14"/></g></svg>
@@ -31,7 +33,7 @@
   </header>
 
   <section id="hero">
-    <h1>Design solutions made easy</h1>
+    <h1 data-aos="fade-down">Design solutions made easy</h1>
     <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
   </section>
 
@@ -75,21 +77,21 @@
     </div>
   </section>
 
-  <section class="carousel-section | flow text-center">
-    <h3 class="heading-3">My Work</h3>
+  <section class="carousel-section">
+    <h3>My Work</h3>
 
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./assets/image-slide-1.jpg" alt="" />
         </div>
-        <div class="swiper-slide">
+        <div data-aos="fade-up"  class="swiper-slide">
           <img src="./assets/image-slide-2.jpg" alt="" />
         </div>
-        <div class="swiper-slide">
+        <div data-aos="fade-up" data-aos-delay="100" class="swiper-slide">
           <img src="./assets/image-slide-3.jpg" alt="" />
         </div>
-        <div class="swiper-slide">
+        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide">
           <img src="./assets/image-slide-4.jpg" alt="" />
         </div>
         <div class="swiper-slide">
@@ -98,16 +100,18 @@
       </div>
     </div>
     <div class="button-controls">
-      <button class="button--control prev" data-type="primary">
+      <button class="button--control-prev">
         <img src="./assets/icon-arrow-left.svg" alt="" />
       </button>
-      <button class="button--control next" data-type="primary">
+      <button class="button--control-next">
         <img src="./assets/icon-arrow-right.svg" alt="" />
       </button>
     </div>
   </section>
 
-  <footer>
+  <script src="./JS/slider.js"></script>
+
+  <footer data-aos="fade-up">
     <div class="footer-content">
       <h2>Book a call with me</h2>
       <p>

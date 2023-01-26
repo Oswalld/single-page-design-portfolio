@@ -75,6 +75,23 @@ header, .sub-footer{
     }
 }
     // -------------------------------------SECTION GRID-------------------------------------
+    @keyframes jump {
+        50% {
+          transform: translateY(-1rem);
+        }
+        100% {
+          transform: translateY(-0.75rem);
+        }
+      }
+    
+      @keyframes fall {
+        0% {
+          transform: translateY(-0.75rem);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
 
 #section-grid{
     display: grid;
@@ -126,6 +143,21 @@ header, .sub-footer{
         font-size: 24px;
         font-weight: 700;
         line-height: 30px;
+        transition: transform 0.3s ease;
+
+        .ability{
+            animation: fall 200ms;
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.07);
+
+            .ability{
+                animation: jump 250ms ease-in-out;
+                animation-fill-mode: forwards;
+            }
+        }
 
         img{
             position: absolute;
@@ -135,6 +167,8 @@ header, .sub-footer{
         }
     }
 }
+
+
     // -------------------------------------SECTION WHO I AM-------------------------------------
 
 #section-who-i-am{
@@ -169,7 +203,6 @@ header, .sub-footer{
     // -------------------------------------SLIDER-------------------------------------
 
 .carousel-section{
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,14 +211,11 @@ header, .sub-footer{
     overflow-x: hidden;
 
     .swiper-wrapper{
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // gap: 15px;
 
         .swiper-slide{
-            max-width: 72%;
+            max-width: 70%;
             img{
+                width: 100%;
                 border-radius: 10px;
             }
         }
@@ -303,21 +333,20 @@ footer{
     }
     // -------------------------------------SLIDER-------------------------------------
 
-    // #section-slider{
-    //     gap: 32px;
-    //     max-width: 1700px;
-    //     margin: 0 auto;
-    //     margin-top: 120px;
+    .carousel-section{
+        gap: 32px;
+        margin: 0 auto;
+        margin-top: 120px;
+
+        .swiper-slide{
+            max-width: 540px !important;
+        }
     
-    //     .slider{
-    //         gap: 30px;
-    //     }
-    
-    //     .slider-buttons{
-    //         display: flex;
-    //         gap: 15px;
-    //     }
-    // }
+        .button-controls{
+            display: flex;
+            gap: 15px;
+        }
+    }
         // -------------------------------------FOOTER-------------------------------------
 
     footer{
@@ -403,15 +432,16 @@ footer{
     }
     // -------------------------------------SLIDER-------------------------------------
 
-    // #section-slider{
-    //     gap: 56px;
-    //     margin-top: 88px;
+    .carousel-section{
+        gap: 56px;
+        margin-top: 88px;
+        max-width: 1700px;
     
-    //     .slider-buttons{
-    //         display: flex;
-    //         gap: 15px;
-    //     }
-    // }
+        .button-controls{
+            display: flex;
+            gap: 15px;
+        }
+    }
         // -------------------------------------FOOTER-------------------------------------
 
     footer{

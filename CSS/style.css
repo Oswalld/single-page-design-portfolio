@@ -180,6 +180,39 @@ header button:hover, .sub-footer button:hover {
   padding: 0 29px;
 }
 
+@-webkit-keyframes jump {
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(-0.75rem);
+  }
+}
+
+@keyframes jump {
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(-0.75rem);
+  }
+}
+@-webkit-keyframes fall {
+  0% {
+    transform: translateY(-0.75rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-0.75rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 #section-grid {
   display: grid;
   grid-template-rows: repeat(6, 182px);
@@ -221,6 +254,21 @@ header button:hover, .sub-footer button:hover {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+  transition: transform 0.3s ease;
+}
+#section-grid .container .ability {
+  -webkit-animation: fall 200ms;
+          animation: fall 200ms;
+}
+#section-grid .container:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
+#section-grid .container:hover .ability {
+  -webkit-animation: jump 250ms ease-in-out;
+          animation: jump 250ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #section-grid .container img {
   position: absolute;
@@ -256,7 +304,6 @@ header button:hover, .sub-footer button:hover {
 }
 
 .carousel-section {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,9 +312,10 @@ header button:hover, .sub-footer button:hover {
   overflow-x: hidden;
 }
 .carousel-section .swiper-wrapper .swiper-slide {
-  max-width: 72%;
+  max-width: 70%;
 }
 .carousel-section .swiper-wrapper .swiper-slide img {
+  width: 100%;
   border-radius: 10px;
 }
 .carousel-section .button-controls {
@@ -352,6 +400,18 @@ footer button:hover {
   #section-who-i-am .who-i-am-content button:hover {
     background-color: hsl(28deg, 89%, 67%);
   }
+  .carousel-section {
+    gap: 32px;
+    margin: 0 auto;
+    margin-top: 120px;
+  }
+  .carousel-section .swiper-slide {
+    max-width: 540px !important;
+  }
+  .carousel-section .button-controls {
+    display: flex;
+    gap: 15px;
+  }
   footer {
     margin: 120px 40px 22px 40px;
     padding: 60px 75px;
@@ -409,6 +469,15 @@ footer button:hover {
     text-align: left;
     max-width: 540px;
     gap: 33px;
+  }
+  .carousel-section {
+    gap: 56px;
+    margin-top: 88px;
+    max-width: 1700px;
+  }
+  .carousel-section .button-controls {
+    display: flex;
+    gap: 15px;
   }
   footer {
     margin: 88px auto 22px auto;
